@@ -1,0 +1,17 @@
+<Project Sdk="Godot.NET.Sdk/4.7.1">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <RootNamespace>DatingSim</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="DatingSim.Core\DatingSim.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="DatingSim.Core\**" />
+    <Compile Remove="DatingSim.Tests\**" />
+  </ItemGroup>
+</Project>
